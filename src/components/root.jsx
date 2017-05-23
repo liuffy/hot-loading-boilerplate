@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/reset.scss';
 import '../styles/app.scss';
 
 const Root = () =>{
