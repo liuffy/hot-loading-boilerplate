@@ -1,3 +1,4 @@
+
 const { resolve } = require('path');
 const webpack = require('webpack');
 
@@ -54,12 +55,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader?modules', ],
+        use: [ 'style-loader', 'css-loader?modules'],
       },
       {
-           test: /\.scss$/,
-            loaders: [ 'style-loader', 'sass-loader' ]
-        }
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
     ],
   },
 

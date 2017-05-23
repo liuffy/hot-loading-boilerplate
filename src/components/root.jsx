@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/app.scss';
 
 const Root = () =>{
 	return(
 		<div>
-			<h1>Hi!</h1>
+			<p className="cool">Hi!</p>
 		</div>
 	)
 }
