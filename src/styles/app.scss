@@ -1,9 +1,11 @@
 @import 'variables';
 
 .cool{
-	color:red;
+	color:black;
+	font-family:sans-serif;
 	height:100px;
-	background:black;
+	background:cyan;
 	display:flex;
 	flex-direction:column;
+	box-shadow: 2px 2px 2px black;
 }
