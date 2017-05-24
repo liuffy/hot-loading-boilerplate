@@ -17,7 +17,7 @@ module.exports = {
     // bundle the client for hot reloading
     // only- means to only hot reload for successful updates
 
-    './app.jsx'
+    './index.jsx'
     // the entry point of our app
   ],
   output: {
@@ -44,23 +44,34 @@ module.exports = {
   },
 
    resolve: {
-      extensions: ['.js', '.jsx', '.scss']
+      extensions: ['.js', '.jsx', '.scss', '.css','.json']
     },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        use: [ 'babel-loader', ],
+        use: [ 'babel-loader'],
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader?modules'],
       },
+      // Just found out json-loader isn't required anymore in V2
       {
-        test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      }
+        test: /\.json$/,
+        exclude: /(node_modules)/,
+        use: ['json-loader']
+      },
     ],
   },
 

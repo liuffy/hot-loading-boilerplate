@@ -1,0 +1,33 @@
+@import '../variables';
+
+/* Color palette*/
+
+$grid-background: $comet-red;
+$grid-border: $galaxy-black;
+
+
+.grid-holder{
+  position: absolute;
+  box-shadow: 0px 10.5px 30.5px 0 rgba(37, 1, 0, 0.31);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+    .box{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      margin-top: -2px;
+      align-items: center;
+      color:black;
+      background:white;
+      font-family:sans-serif;
+      font-size:2em;
+      border:2px solid $grid-border;
+
+      &:hover{
+        color: $grid-background;
+        background: $grid-border;
+      };
+    }
+}

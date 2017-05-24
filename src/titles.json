@@ -1,0 +1,17 @@
+{
+	"hello" : "Hi",
+	"goodbye" : "Zhenya",
+	"nope" : 
+	{ 
+    "stuff": {
+        "onetype": [
+            {"id":1,"name":"☄️ Thanks for interviewing me! ☄️"},
+            {"id":2,"name":"Don Joeh"}
+        ],
+        "othertype": {"id":2,"company":"ACME"}
+    }, 
+    "otherstuff": {
+        "thing": [[1,42],[2,2]]
+     }
+}
+}
